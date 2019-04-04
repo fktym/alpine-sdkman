@@ -9,8 +9,7 @@ RUN chsh -s /bin/bash
 
 RUN curl -s "https://get.sdkman.io" | bash
 
-RUN set -x \
-    echo "sdkman_auto_answer=true" > $SDKMAN_DIR/etc/config && \
+RUN echo "sdkman_auto_answer=true" > $SDKMAN_DIR/etc/config && \
     echo "sdkman_auto_selfupdate=false" >> $SDKMAN_DIR/etc/config && \
     echo "sdkman_insecure_ssl=true" >> $SDKMAN_DIR/etc/config
 
